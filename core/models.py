@@ -33,6 +33,8 @@ class Pessoa(models.Model):
     ativo = models.BooleanField(default=True)
     cidade = models.CharField(max_length=100)
     departamento = models.ForeignKey(Departamento, models.DO_NOTHING, related_name='pessoa')
+    empresa = models.ForeignKey(Empresa, models.DO_NOTHING, related_name='pessoa_empresa')
+
 
     def __str__(self):
         return self.nome_completo

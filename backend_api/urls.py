@@ -21,8 +21,11 @@ from core.views import *
 
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'groups', GroupViewSet)
+# router.register(r'users', UserViewSet)
+# router.register(r'groups', GroupViewSet)
+router.register(r'empresas', EmpresaViewSet)
+router.register(r'departamentos', DepartamentoViewSet)
+router.register(r'pessoas', PessoaViewSet)
 
 
 urlpatterns = [
